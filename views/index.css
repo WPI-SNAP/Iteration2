@@ -44,8 +44,11 @@ body {
 }
 /* END: Form Styles */
 
-.bottom {
-    position: fixed;
+#bottom {
+    position: absolute;
     bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
     color: white;
 }
