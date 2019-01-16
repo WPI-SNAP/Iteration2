@@ -1,0 +1,51 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation Bar Styles */
+.navLeft {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ac2b37;
+    width: 100%;
+    z-index: 0;
+    text-align: center;
+    border-radius:10px; /* make the corner round*/
+    color: black;
+}
+
+/* START: Form Styles */
+.form {
+    width: 800px;
+    margin: 50px auto 20px;
+}
+
+.formField {
+    width: 100%;
+    height: 60px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #34495e;
+    outline: none;
+    font: 300 28px 'Lato', sans-serif;
+    padding: 20px;
+    color: #34495e;
+}
+
+.btn-space {
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+/* END: Form Styles */
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    color: white;
+}

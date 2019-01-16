@@ -1,0 +1,26 @@
+{
+  "name": "iteration2",
+  "version": "1.0.0",
+  "description": "Student Side of SNAP Web Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WPI-SNAP/Iteration2.git"
+  },
+  "author": "Jack Palmstrom, Yosuke Nakamura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WPI-SNAP/Iteration2/issues"
+  },
+  "homepage": "https://github.com/WPI-SNAP/Iteration2#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "moment": "^2.23.0",
+    "mysql": "^2.16.0"
+  }
+}

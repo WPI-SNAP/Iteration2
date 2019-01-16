@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SNAP Student</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Sidebar Nav CSS -->
+    <link rel="stylesheet" href="sidebarNavigation.css">
+
+    <link rel="stylesheet" href="index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Sidebar Nav JS -->
+    <script src="sidebarNavigation.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse sidebarNavigation" data-sidebarClass="navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle left-navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/index">SNAP</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Shuttles</a></li>
+                <li><a href="#">Rules & Regulations</a></li>
+                <li><a href="#">Contact SNAP</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+
+            <p class="bottom">SNAP: 508-831-6111</p>
+        </div>
+    </div>
+</nav>
+
+<div class="container" style="align-content: center">
+    <h4 style="text-align: center">Request Form</h4>
+    <!-- Request Ride Form -->
+    <form action="/submitRequest" method="post">
+
+        <div class="form-group form-inline">
+            <label>To:</label>
+            <input type="text" class="form-control" name="goingTo">
+        </div>
+
+        <div class="form-group  form-inline">
+            <label>From:</label>
+            <input type="text" class="form-control" name="comingFrom">
+        </div>
+
+        <div class="form-group  form-inline">
+            <label>No. Passengers:</label>
+            <input type="number" class="form-control" min="0" max="5" name="numPassengers">
+        </div>
+
+        <label>Are Accommodations Needed?</label>
+        <div class="form-group form-check-inline">
+            <label class="radio-inline" for="yesCheck">
+                <input type="radio" class="btn-space form-check-input" onclick="javascript:yesnoCheck();" name="yesno"
+                       id="yesCheck">Yes
+            </label>
+            <label class="radio-inline" for="noCheck">
+                <input type="radio" class="btn-space form-check-input" onclick="javascript:yesnoCheck();" name="yesno"
+                       id="noCheck" checked>No
+            </label>
+        </div>
+        <div class="form-group" id="ifYes" style="visibility:hidden">
+
+            <input type="text" class="form-control" name="accommodations" value="Insert Accommodations...">
+        </div>
+
+        <div class="form-group text-center">
+            <input type="submit" id="submit" class="btn btn-secondary btn-lg" value="Submit">
+        </div>
+    </form>
+
+
+</div>
+
+<script>
+    function yesnoCheck() {
+        if (document.getElementById('yesCheck').checked) {
+            document.getElementById('ifYes').style.visibility = 'visible';
+        }
+        else document.getElementById('ifYes').style.visibility = 'hidden';
+    }
+</script>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
