@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>SNAP Student</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SNAP Student</title>
+    <link rel="icon" href="WPI_logo.png">
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- Sidebar Nav CSS -->
@@ -18,7 +22,7 @@
     <script src="sidebarNavigation.js"></script>
 </head>
 <body>
-
+<!-- Nav & Sidebar CSS -->
 <nav class="navbar navbar-inverse sidebarNavigation" data-sidebarClass="navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -48,13 +52,13 @@
     </div>
 </nav>
 
+<!-- Request Ride Form -->
 <div class="container" style="align-content: center">
     <h4 style="text-align: center">Request Form</h4>
-    <!-- Request Ride Form -->
     <form action="/submitRequest" method="post">
 
         <div class="form-group form-inline">
-            <label>To:</label>
+            <label style="float: left">To:</label>
             <input type="text" class="form-control" name="goingTo">
         </div>
 
@@ -88,7 +92,6 @@
             <input type="submit" id="submit" class="btn btn-secondary btn-lg" value="Submit">
         </div>
     </form>
-
 
 </div>
 

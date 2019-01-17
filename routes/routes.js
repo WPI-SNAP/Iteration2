@@ -12,6 +12,10 @@ module.exports = function (app) {
         res.render('index.ejs', {});
     });
 
+    app.get('/index1', function (req, res) {
+        res.render('index1.ejs', {});
+    });
+
 // Adds the newRequest to the AWS MySQL DB
     app.post('/submitRequest', function (req, res) {
         // Connect to the dispatcher database
