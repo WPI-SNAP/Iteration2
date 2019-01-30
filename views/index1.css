@@ -103,3 +103,13 @@ a[data-toggle="collapse"] {
     text-align: center;
     color: white;
 }
+
+.btn {
+    background-color: #ac2b37;
+    text-decoration: #ac2b37;
+}
+
+.btn-info {
+    background-color: #ac2b37;
+    text-decoration: #ac2b37;
+}
