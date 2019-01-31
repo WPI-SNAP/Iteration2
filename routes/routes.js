@@ -19,6 +19,10 @@ module.exports = function (app) {
     app.get('/shuttleInfo', function (req, res) {
         res.render('shuttleInfo.ejs', {});
     });
+    app.get('/policy', function (req, res) {
+        res.render('policy.ejs', {});
+    });
+
 
 // Adds the newRequest to the AWS MySQL DB
     app.post('/submitRequest', function (req, res) {
