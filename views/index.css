@@ -188,7 +188,7 @@ ol > li:before {
     content: counter(item) ".";
 }
 
-.btn-space > * {
-    padding-left:3px !important;
-    padding-right:3px !important;
+
+.form-check-input {
+    margin-left: 4px !important;
 }
