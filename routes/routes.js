@@ -12,10 +12,6 @@ module.exports = function (app) {
         res.render('index.ejs', {});
     });
 
-    app.get('/index1', function (req, res) {
-        res.render('index1.ejs', {});
-    });
-
     app.get('/shuttleInfo', function (req, res) {
         res.render('shuttleInfo.ejs', {});
     });
