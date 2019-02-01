@@ -1,26 +1,30 @@
 const mysql = require('mysql');
 const moment = require('moment');
 
-
 module.exports = function (app) {
 
+    // Direct to the home page
     app.get('/', function (req, res) {
         res.render('index.ejs', {});
     });
 
+    // Direct to the home page
     app.get('/index', function (req, res) {
         res.render('index.ejs', {});
     });
 
+    // Direct to the Gateway Shuttle Info page
     app.get('/shuttleInfo', function (req, res) {
         res.render('shuttleInfo.ejs', {});
     });
+
+    // Direct to the SNAP Policy Page
     app.get('/policy', function (req, res) {
         res.render('policy.ejs', {});
     });
 
 
-// Adds the newRequest to the AWS MySQL DB
+    // Adds the SNAP Ride Request newRequest to the AWS MySQL DB
     app.post('/submitRequest', function (req, res) {
         // Connect to the dispatcher database
         let dispatcherDB = mysql.createConnection({
@@ -41,12 +45,9 @@ module.exports = function (app) {
             if (err) {
                 return console.error(err.message);
             }
-            // Retrieve inserted id
-            console.log("Going to: " + req.body.goingTo);
             dispatcherDB.end();
             // Sends the user back to the home page
             res.redirect('/index');
         });
     });
-
 };
