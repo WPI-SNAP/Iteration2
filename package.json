@@ -18,10 +18,12 @@
   "homepage": "https://github.com/WPI-SNAP/Iteration2#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "bootstrap": "^4.2.1",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "moment": "^2.23.0",
     "mysql": "^2.16.0",
+    "npm": "^6.7.0",
     "path": "^0.12.7"
   }
 }
